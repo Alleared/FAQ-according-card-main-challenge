@@ -1,0 +1,185 @@
+
+/* GOOGLE FONT IMPORT */
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
+
+.attribution { font-size: 11px; text-align: center; color: hsl(0, 0%, 100%);}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  
+}
+
+/* VARIABLES */
+
+:root {
+
+  /* ---------- COLORS ---------- */
+  /* TEXT COLORS */
+  --VERY-DARK-DESATURATED-BLUE: hsl(238, 29%, 16%);
+  --VERY-SOFT-RED: hsl(14, 88%, 65%);
+  --VERY-DARK-GRAYISH-BLUE: hsl(237, 12%, 33%);
+  --DARK-GRAYISH-BLUE: hsl(240, 6%, 50%);
+
+  /* BACKGROUND GRADIENT COLORS*/
+  --SOFT-VIOLET: hsl(273, 75%, 66%);
+  --SOFT-BLUE: hsl(240, 73%, 65%);
+  
+  /* DIVIDERS COLORS */
+  --LIGHT-GRAYISH-BLUE: hsl(240, 5%, 91%);
+
+
+  /* ---------- SHADOW STYLES ---------- */
+
+  --MAIN-SHADOW: 3px 5px 30px rgba(0, 0, 0, 0.37);
+
+
+  /* ---------- TRANSFORM ROTATE -------- */
+  /* --AFTER-ROTATE: rotate(0deg) */
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: 'Kumbh Sans', sans-serif;
+  background-image: linear-gradient(var(--SOFT-VIOLET), var(--SOFT-BLUE));
+  
+}
+
+article {
+  background-color: white;
+  border-radius: 25px;
+  box-shadow: var(--MAIN-SHADOW);
+  overflow: hidden;
+  margin: 2rem;
+  
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+.illustration-container {
+  margin-left: -5rem;
+  background-image: url(../images/bg-pattern-desktop.svg);
+  background-position: -31rem -20rem;
+  
+  /* background-size: 100%; */
+  background-repeat: no-repeat;
+  position: relative;
+  
+}
+
+
+.illustration-woman-online {
+  content: url(../images/illustration-woman-online-desktop.svg);
+  margin: 2rem 0;
+  
+}
+
+.illustration-box {
+  content: url(../images/illustration-box-desktop.svg);
+  position: fixed;
+
+  top: 45%;
+  
+}
+
+h1 {
+  margin: 2rem 0;
+  font-size: 2rem;
+}
+
+.faq-container {
+  width: 350px;
+  margin: 0 3rem;
+  
+}
+
+details {
+  border-bottom: 1px solid var(--LIGHT-GRAYISH-BLUE);
+  margin: 1rem 0;
+  
+}
+
+details p {
+  font-size: 0.8rem;
+  color: var(--DARK-GRAYISH-BLUE);
+  margin: 1rem 0;
+}
+
+/* remove standart arrow */
+details > summary {
+  list-style: none;
+}
+
+.details-container {
+  max-width: 350px;
+}
+
+summary {
+  margin: 0.5rem 0;
+  position: relative;
+  font-size: .9rem;
+}
+
+summary:hover {
+  cursor: pointer;
+  color: var(--VERY-SOFT-RED);
+  
+}
+
+summary::after {
+  content: url(../images/icon-arrow-down.svg);
+  position: absolute;
+  right: 0;
+  transform: var(--AFTER-ROTATE, rotate(0deg));
+  
+}
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 800px) {
+
+  article {
+    overflow: visible;
+  }
+
+  .main-container {
+    flex-direction: column;
+    position: relative;
+  }
+
+  .illustration-woman-online {
+    content: url(../images/illustration-woman-online-mobile.svg);
+    width: 300px;
+    position: absolute;
+    top: -10rem;
+    left: -6.85rem;
+  }
+
+  .illustration-box {
+    content: '';
+  }
+
+  h1 {
+    margin: 7rem 0 2rem 0;
+    text-align: center;
+  }
+
+  .faq-container {
+    margin: 3rem 1.5rem;
+  }
+
+}
+
